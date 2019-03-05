@@ -1,0 +1,231 @@
+@font-face {
+    font-family: 'Exo';
+    src: url('fonts/Exo-MediumItalic.eot');
+    src: url('fonts/Exo-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Exo-MediumItalic.woff2') format('woff2'),
+        url('fonts/Exo-MediumItalic.woff') format('woff'),
+        url('fonts/Exo-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'Exo';
+    src: url('fonts/Exo-LightItalic.eot');
+    src: url('fonts/Exo-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Exo-LightItalic.woff2') format('woff2'),
+        url('fonts/Exo-LightItalic.woff') format('woff'),
+        url('fonts/Exo-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'Exo';
+    src: url('fonts/Exo-Medium.eot');
+    src: url('fonts/Exo-Medium.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Exo-Medium.woff2') format('woff2'),
+        url('fonts/Exo-Medium.woff') format('woff'),
+        url('fonts/Exo-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Exo';
+    src: url('fonts/Exo-Light.eot');
+    src: url('fonts/Exo-Light.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Exo-Light.woff2') format('woff2'),
+        url('fonts/Exo-Light.woff') format('woff'),
+        url('fonts/Exo-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+  /*--------------------------------------------------------------*/
+  body{
+      font-family: Exo;
+      font-weight: 500;
+      font-style: normal;
+      background-color: #222222;
+      color: #fff;
+      font-size: 16px;
+      a{
+          color: #00cc00;
+      }
+      a:hover{
+          color: #fff;
+      }
+  }
+  .quote{
+    letter-spacing: 1.5rem;
+    color: red;
+      
+  }
+.post_titles{
+    ul{
+        list-style: none;
+    }
+}
+.header-title{
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fff;
+}
+.on{
+    color: #00cc00;
+    font-weight: 100;
+}
+@media only screen and (min-width: 600px){
+    .header-title{
+        font-size: 4rem;
+    }
+}
+@media only screen and (min-width: 900px){
+    .header-title{
+        font-size: 6rem;
+    }
+}
+  .site-header {
+    width: 100%;
+    
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+
+    .site-branding {
+        width: 100%;
+        max-width: 300px;
+
+        @include tablet {
+            max-width: 500px;
+        }
+
+        @include desktop {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.site-footer {
+    width: 100%;
+
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+
+    .main-navigation {
+        p {
+            display: inline-flex;
+            margin: 0px;
+            padding-top: 10px;
+
+            @include tablet {
+                padding: 0 1rem;
+                border-left: $border__solid;
+            }
+        }
+    }
+}
+
+.site {
+    width: 100%;
+    max-width: $max__width;
+    margin: 0 auto;
+    padding: 2.5%;
+}
+
+.content-area {
+    position: relative;
+
+    @include desktop {
+        margin: 4.5rem 175px 1.5rem;
+
+        &::before, &::after {
+            color: $color__brand-green;
+    
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 125px;
+            line-height: 125px;
+    
+            position: absolute;
+            top: 0;
+        }
+        &::before {
+            content: "\f10d";
+            left: -175px;
+        }
+        &::after {
+            content: "\f10e";
+            right: -175px;
+        }
+    }
+}
+
+.site-archive {
+
+    display: block;
+
+    & > div {
+        padding-bottom: 2rem;
+    }
+
+    ul {
+        list-style: none;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    li {
+        float: left;
+        font-size: 1.25rem;
+        margin-bottom: .6rem;
+        margin-right: 1.25rem;
+    }
+}
+
+.number-pagination {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    //border-top: $border__dashed;
+
+    .page-numbers {
+        padding: 0 .25rem;
+    }
+}
+
+.post{
+    .entry-content {
+        font-size: 2.25rem;
+    }
+    .entry-footer{
+        display: inline-flex;
+        margin-bottom: 1rem;
+    }
+    .entry-reference{
+        height: 100%;
+        font-style: italic;
+    }
+    .entry-title {
+        
+        font-size: 1.25rem;
+        font-weight: 400;
+    }
+}
+
+.archive { 
+    article {
+        border-bottom: $border__dashed;
+        margin: .25rem 0;
+        padding: .25rem 0;
+
+        &:first-of-type {
+            border-top: $border__dashed;
+        }
+    }
+
+}
